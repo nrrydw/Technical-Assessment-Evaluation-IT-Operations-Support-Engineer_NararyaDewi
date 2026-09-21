@@ -1,0 +1,117 @@
+TASK 4 — AI-ASSISTED CODING AND VALIDATION RECORD
+Easy Rent Bali — IT Operations & QA Support Engineer
+
+This record professionally summarizes the actual AI-assisted workflow. It is paraphrased for readability and is not a verbatim platform export.
+
+======================================================================
+1. REQUIREMENT ANALYSIS
+======================================================================
+
+CANDIDATE DIRECTION
+Review the assessment, break it into the required tasks, and prepare the
+submission using the specified repository layout.
+
+AI ACTION
+The work was decomposed into RCA, QA test design, fleet triage automation,
+and AI-session evidence. Required filenames and folder placement were
+identified before implementation.
+
+VALIDATION
+The resulting repository structure was checked against the assessment.
+
+======================================================================
+2. INCIDENT RCA AND DEFENSIVE IMPLEMENTATION
+======================================================================
+
+INPUT CONDITION
+customer.doc_urls is null while the application attempts to access
+passport_scan.
+
+AI ACTION
+The implementation was designed around a null-safe document object and
+explicit domestic/foreign document validation.
+
+VALIDATION
+The proposed logic was reviewed for null safety, controlled validation
+failures, and operational recovery considerations.
+
+======================================================================
+3. QA TEST MATRIX
+======================================================================
+
+AI ACTION
+A prioritized matrix was produced from the assessment rules, including
+24-hour boundaries, voucher threshold/case/expiry conditions, timezone
+boundaries, missing documents, booking overlap, concurrency, and regression.
+
+VALIDATION
+Coverage was checked against every required edge-case category and the
+assessment's requested table columns.
+
+======================================================================
+4. TRIAGE SCRIPT IMPLEMENTATION
+======================================================================
+
+REQUIRED LOGIC
+overdue_hours > 0
+OR
+(status == "rented" AND fuel_level < 20%)
+
+AI ACTION
+The Node.js script was implemented to load the JSON data, parse fuel values,
+evaluate the two conditions independently, and produce operational urgency
+tags.
+
+VALIDATION RUN
+The supplied sample data produced three alerts:
+
+DK 5678 CD — OVERDUE + LOW FUEL
+DK 3456 GH — OVERDUE
+DK 7890 IJ — LOW FUEL
+
+The remaining two vehicles produced no alert. This confirmed the OR predicate
+against the provided dataset.
+
+======================================================================
+5. REQUIREMENT REVIEW / STEERING
+======================================================================
+
+CANDIDATE REVIEW
+The candidate requested a second review of Task 4 to determine whether the
+session evidence genuinely satisfied the assessment wording.
+
+AI ACTION
+The evidence was reviewed and reorganized around four elements: prompt
+structure, AI response, validation, and candidate steering. The distinction
+between a curated session record and a raw platform export was also made
+explicit.
+
+CANDIDATE FOLLOW-UP
+The candidate then asked which repository files needed to be changed.
+
+AI ACTION
+The repository layout was checked and the Task 4 evidence was isolated to:
+
+  ai_session_logs/triage_prompt_log.md
+  ai_session_logs/agent_coding_log.txt
+
+The core assessment files were left unchanged because their structure already
+matched the submission requirements.
+
+======================================================================
+6. AUTHENTICITY NOTE
+======================================================================
+
+No artificial example is presented as a real bug-fix exchange. The available
+session demonstrates requirement steering, validation, evidence review, and
+repository correction, but does not contain a genuine event where a buggy
+triage implementation was identified by the candidate and subsequently fixed
+through a new AI response.
+
+For strict verification of the phrase "exported chat transcripts," a genuine
+ChatGPT platform export can be added to this directory as supplementary
+evidence.
+
+======================================================================
+END OF RECORD
+======================================================================
