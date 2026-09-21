@@ -1,0 +1,57 @@
+AI CODING / VALIDATION LOG
+Easy Rent Bali — IT Operations & Support Engineer Assessment
+
+Session type: AI-assisted implementation and review
+Scope: Task 1, Task 2, Task 3
+Repository artifacts: README.md, triage.js, fleet_status.json
+
+[ANALYSIS]
+Assessment requirements extracted:
+- Task 1 RCA + defensive JS/TS patch + operational impact.
+- Task 2 minimum 6 prioritized QA cases with required columns.
+- Task 3 functional script using:
+    overdue_hours > 0
+    OR
+    status == rented AND fuel_level < 20%
+- Task 4 requires AI interaction trail.
+
+[IMPLEMENTATION]
+Created triage.js.
+Input source: fleet_status.json.
+Fuel strings are parsed from "NN%" into numeric values.
+
+[VALIDATION]
+Fleet records evaluated:
+1. DK 1234 AB: rented, 80%, overdue 0 -> no alert.
+2. DK 5678 CD: rented, 15%, overdue 3 -> OVERDUE + LOW FUEL.
+3. DK 9012 EF: available, 40%, overdue 0 -> no alert.
+4. DK 3456 GH: rented, 90%, overdue 5 -> OVERDUE.
+5. DK 7890 IJ: rented, 10%, overdue 0 -> LOW FUEL.
+
+[DEFENSIVE REVIEW]
+Confirmed the script:
+- handles file read errors;
+- handles invalid JSON;
+- verifies the JSON root is an array;
+- avoids treating malformed fuel strings as low-fuel alerts;
+- follows the exact requested boolean condition.
+
+[FINAL REVIEW]
+Task 1:
+- Root cause is null document payload access.
+- Patch uses optional/null-safe document handling.
+- Recovery flow uses idempotency and re-checks availability.
+
+Task 2:
+- Includes 14 cases.
+- Covers all requested categories and boundary conditions.
+
+Task 3:
+- Functional Node.js implementation.
+- Produces Slack/WhatsApp-style alert text.
+
+Task 4:
+- Prompt steering log and coding/validation log included.
+
+[NOTE]
+This file is a transparent record prepared for this submission. It does not claim to be a verbatim export from Claude Code, Cursor, Gemini, Copilot, or another external agent session.
