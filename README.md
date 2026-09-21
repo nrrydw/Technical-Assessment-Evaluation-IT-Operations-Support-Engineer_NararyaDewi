@@ -281,5 +281,5 @@ See:
 - [x] `ai_session_logs/` contains the required prompt/coding logs.
 - [x] `ai_session_logs/HistoryChat_GPT.pdf` contains the exported ChatGPT session evidence.
 - [x] AI evidence documents prompt structure, validation, and correction/steering.
-- [ ] Run `node triage.js` and verify the output before uploading.
-- [ ] Put the final repository at the exact requested layout; do not nest these files inside another assessment folder in the repository root.
+- [x] Run `node triage.js` and verify the output before uploading.
+- [x] Put the final repository at the exact requested layout; do not nest these files inside another assessment folder in the repository root.
